@@ -25,7 +25,7 @@ SECRET_KEY = 'lel'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fase1.herokuapp.com']
 
 
 # Application definition
