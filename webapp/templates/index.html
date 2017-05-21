@@ -1,0 +1,154 @@
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overwatch page</title>
+        {% load staticfiles %}
+
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/myCSS.css' %}" rel="stylesheet" type="text/css">
+    </head>
+
+
+    <body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#pog"><span ></span>Plays of the Game</a></li>
+                    <li><a href="#results"><span ></span> Post Match Results</a></li>
+
+                    <li><a href="upload"><span class="glyphicon glyphicon-cloud-upload"></span> Upload</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <header>
+            <div class="header-content">
+                <div class="header-content-inner main-text">
+            <h1>A social place to share your Overwatch achievements! </h1>
+            <h3>Show other players around the world your best plays and stats. Show them who's the best!</h3>
+                </div>
+            </div>
+        </header>
+        <!--
+        <section id="heroes" class="bg-heroes">
+            <h1>Characters</h1>
+            <div class="center-buttons">
+                <button class="col-sm-3 btn btn-default btn-selector" onclick="showAttack()">Attack</button>
+                <button class="col-sm-3 btn btn-default btn-selector" onclick="showDefense()">Defense</button>
+                <button class="col-sm-3 btn btn-default btn-selector" onclick="showTank()">Tank</button>
+                <button class="col-sm-3 btn btn-default btn-selector" onclick="showSupport()">Support</button>
+            </div>
+            <br>
+            <br>
+            <div class="attack" id="attack">
+                <ul>
+                    <li>Genji</li>
+                    <li>Mccree</li>
+                </ul>
+            </div>
+            <div class="defense" style="display: none" id="defense">
+                <ul>
+                    <li>Bastion</li>
+                    <li>Hanzo</li>
+                </ul>
+            </div>
+            <div class="tank" style="display: none" id="tank">
+                <ul>
+                    <li>D.VA</li>
+                    <li>Orisa</li>
+                </ul>
+            </div>
+            <div class="support" style="display: none" id="support">
+                <ul>
+                    <li>Ana</li>
+                    <li>Lucio</li>
+                </ul>
+            </div>
+        </section>
+        -->
+        <section id="pog" class="bg-plays">
+            <h1>Plays of the Game</h1>
+            <div class="cointainer-fluid ">
+                {% for play in query_results %}
+
+                    <div class="row pog-rows">
+                        <iframe  src="{{ play.video }}" class="play-game col-sm-8"> </iframe>
+                        <div class="text-play col-sm-4">
+                        Uploaded by: {{ play.author }}
+                        <br> Character: {{ play.character }}
+                        </div>
+                    </div>
+
+               {% endfor %}
+
+
+
+            </div>
+        </section>
+
+        <section id="results" class="bg-results">
+            <h1>After match results</h1>
+            <div class="cointainer-fluid">
+                {% for stat in query_results2 %}
+
+                    <div class="row resuls-rows">
+                        <img src="{{ stat.image.url }}" class="image-results col-sm-4">
+                        <div class="text-results col-sm-4">
+                            Uploaded by: {{ stat.author }}
+                            <br> Character: {{ stat.character }}
+                        </div>
+
+                    </div>
+               {% endfor %}
+
+
+
+            </div>
+
+
+        </section>
+        <script>
+            function showDefense() {
+                document.getElementById("defense").style.display = "inline";
+                document.getElementById("attack").style.display = "none";
+                document.getElementById("support").style.display = "none";
+                document.getElementById("tank").style.display = "none";
+            }
+
+            function showAttack() {
+                document.getElementById("attack").style.display = "inline";
+                document.getElementById("defense").style.display = "none";
+                document.getElementById("support").style.display = "none";
+                document.getElementById("tank").style.display = "none";
+            }
+
+            function showTank() {
+                document.getElementById("tank").style.display = "inline";
+                document.getElementById("attack").style.display = "none";
+                document.getElementById("support").style.display = "none";
+                document.getElementById("defense").style.display = "none";
+            }
+
+            function showSupport() {
+                document.getElementById("support").style.display = "inline";
+                document.getElementById("attack").style.display = "none";
+                document.getElementById("defense").style.display = "none";
+                document.getElementById("tank").style.display = "none";
+            }
+        </script>
+
+    </body>
+
+    </html>
+
+{% endblock %}

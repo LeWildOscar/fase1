@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <section class="upload">
+            <div class="format-upload">
+                    <h1>
+                        Upload Play of the Game
+                    </h1><br>
+                    <form action="/upload" method="post">{% csrf_token %}
+                        Your name:<br>
+                        <input type="text" name="author"><br>
+                        Your character:<br>
+                        <input type="text" name="character"><br>
+                        Link(embed)to youtube video:<br>
+                        <input type="text" name="video"><br>
+                        <br>
+                        <input type="hidden" name="type" value="play"><br>
+                        <input type="submit" value="Submit" class="btn btn-info">
+                    </form>
+
+            </div>
+        </section>
+
+
+    </body>
+
+    </html>
+
+{% endblock %}

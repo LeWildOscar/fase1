@@ -1,0 +1,48 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overwatch page</title>
+        {% load staticfiles %}
+
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/myCSS.css' %}" rel="stylesheet" type="text/css">
+    </head>
+
+
+    <body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li><a href="../"><span class="glyphicon glyphicon-arrow-left"></span> Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <header>
+            <div class="header-content">
+                <div class="header-content-inner">
+            <h1>A social place to share your Overwatch achievements! </h1>
+            Show other players around the world your best plays and stats. Show them who's the best!
+                </div>
+            </div>
+        </header>
+    {% block content %}
+		{% endblock %}
+
+
+    </body>
+
+    </html>
+

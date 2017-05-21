@@ -1,0 +1,208 @@
+body{
+    background-color: azure;
+    
+}
+iframe{
+    border: none;
+}
+
+.btn-selector{
+    background: none;
+    outline: none;
+}
+.btn-selector:active:focus{
+    background-color: cornflowerblue;
+}
+
+.btn-selector:focus{
+    background-color: cornflowerblue;
+}
+
+.btn-selector:active{
+    background-color: cornflowerblue;
+}
+.btn-selector:hover{
+    background-color: aliceblue;
+}
+.btn-selector:focus:hover{
+    background-color: cornflowerblue;
+}
+
+.card-results{
+    height: 250px;
+    
+}
+.image-results{
+    height: 250px;
+    width: auto;
+    margin-bottom: 30px;
+}
+.text-results{
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+
+}
+.play-game {
+    width: 420px;
+    height: 345px;
+}
+
+.bg-heroes{
+    background-image: url('../images/bg-heroes.png');
+    color: white;
+}
+.upload{
+     margin-top: -20px;
+    padding-top: 20px;
+
+    background-image: url('../images/ow4.jpg');
+    color: white;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    height: 900px;
+
+}
+.main-text{
+         background:rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px 40px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+.format-upload{
+     background:rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px 40px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.bg-plays{
+    margin-top: -20px;
+    padding-top: 20px;
+    background-image: url('../images/ow2.jpg');
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+}
+.bg-plays h1{
+    color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.bg-results h1{
+    color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.pog-rows{
+    background:rgba(255,255,255,0.5);
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px 40px;
+    border-radius: 25px;
+}
+.resuls-rows{
+     background:rgba(255,255,255,0.5);
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px 40px;
+    border-radius: 25px;
+}
+.navbar-transparent{
+    background: rgba(0,0,0,0.4);
+}
+.center-buttons button{
+    color : white;
+}
+.bg-results{
+    margin-top: -30px;
+    padding-top: 20px;
+     background-image: url('../images/ow3.jpg');
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+}
+.text-play{
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+/* creative.css style*/
+header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../images/header.jpg');
+  text-align: center;
+  color: azure;
+}
+header .header-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+header .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+header .header-content .header-content-inner p {
+  font-weight: 300;
+  color: rgba(255, 255, 0, 0.7);
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  header .header-content .header-content-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 50px;
+  }
+  header .header-content .header-content-inner p {
+    font-size: 18px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
